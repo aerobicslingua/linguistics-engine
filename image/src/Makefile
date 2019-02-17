@@ -1,9 +1,7 @@
-FLASK_APP=$(CURDIR)/server.py
+export FLASK_APP=$(CURDIR)/server.py
+
 prepare:
-	pip3 install -U spacy
-	pip3 install webvtt-py
-	pip3 install flask
-	pip3 install -U flask-cors
+	pip3 install -U -r requirements.txt 
 	python3 -m spacy download en
 testPoS:
 	python3 PoS.py ./partial.vtt

@@ -1,0 +1,4 @@
+spacy
+webvtt-py
+flask
+flask-cors
