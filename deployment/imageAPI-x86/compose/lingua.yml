@@ -1,9 +1,0 @@
-services:
-  engine:
-    environment:
-      FLASK_APP: server.py
-    image: aerobicslingua/linguistics-engine-x86:test
-    ports:
-    - 7000:5000/tcp
-version: '3.1'
-

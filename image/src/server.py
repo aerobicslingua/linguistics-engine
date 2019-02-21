@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import PoS
+import logic 
 app = Flask(__name__)
 
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
+url = 'http://127.0.0.1:3000/query/%s'
 
 @app.route('/')
 def hello_world():
@@ -16,4 +17,4 @@ def upload_file():
         f = request.files['subtitles']
         name = './sample.vtt'
         f.save(name)
-        return jsonify(PoS.parse_vtt(name))
+        return jsonify(logic.parse_translate_vtt(url, name))
