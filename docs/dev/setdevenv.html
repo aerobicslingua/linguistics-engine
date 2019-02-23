@@ -263,13 +263,22 @@
 <h3 id="clone-the-project">Clone the project</h3>
 <pre><code>git clone https://github.com/aerobicslingua/linguistics-engine.git
 </code></pre><h3 id="install-dependencies">Install dependencies</h3>
-<p>The source code is under <code>image/src</code>.</p>
-<pre><code>cd image/src
-make prepare
-</code></pre><h3 id="start-service">Start service</h3>
-<pre><code>make run
-</code></pre><p>Which server will be active listening at <code>127.0.0.1:7000</code>. Visit it through browser.</p>
-
+<p>The source code is under <code>image/src</code>, and written in <code>python3</code> with <code>flask</code> framework.</p>
+<pre><code>cd linguistics-engine
+make create-devenv
+</code></pre><p>It will install the dependencies packages in system.</p>
+<h3 id="start-and-stop-service">Start and stop service</h3>
+<pre><code>cd linguistics-engine
+make start-devenv
+</code></pre><ul>
+<li>It starts http server listening at <code>127.0.0.1:7000</code>. Visit it through browser to test whether it is active.</li>
+<li>You can modify the code under <code>image/src</code>, the server will be restarted automatically once the code is changed.</li>
+<li>You can type <code>ctrl-c</code> to stop the service.</li>
+</ul>
+<h3 id="clean-the-development-environment">Clean the development environment</h3>
+<pre><code>cd linguistics-engine
+make clean-devenv
+</code></pre>
                                 
                                 </section>
                             
@@ -312,7 +321,7 @@ make prepare
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to set dev environment","level":"3.1","depth":1,"next":{"title":"How to build locally","level":"3.2","depth":1,"path":"dev/localbuild.md","ref":"dev/localbuild.md","articles":[]},"previous":{"title":"Deployment","level":"2.2","depth":1,"path":"qs/deployment.md","ref":"qs/deployment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dev/setdevenv.md","mtime":"2019-02-17T05:53:40.826Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-17T06:06:12.916Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to set dev environment","level":"3.1","depth":1,"next":{"title":"How to build locally","level":"3.2","depth":1,"path":"dev/localbuild.md","ref":"dev/localbuild.md","articles":[]},"previous":{"title":"Deployment","level":"2.2","depth":1,"path":"qs/deployment.md","ref":"qs/deployment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dev/setdevenv.md","mtime":"2019-02-23T05:48:14.342Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-23T06:04:31.490Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
