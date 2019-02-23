@@ -5,8 +5,19 @@ DF = $(IMAGE_ENV)/Dockerfile
 DEPLOYMENT = $(CURDIR)/deployment
 OWNER = aerobicslingua
 REPO = linguistics-engine
+SRC = $(IMAGE_ENV)/src
 VERSION = test
 ARCH = x86
+
+.PHONY: create-devenv start-devenv clean-devenv
+export FLASK_APP=$(SRC)/server.py
+create-devenv:
+	pip3 install -U -r $(SRC)/requirements.txt 
+	python3 -m spacy download en
+start-devenv:
+	python3 -m flask run --port 7000
+clean-devenv:
+	pip3 uninstall -r $(SRC)/requirements.txt
 
 .PHONY: mk-book clean-book
 mk-book: $(GITBOOK)
