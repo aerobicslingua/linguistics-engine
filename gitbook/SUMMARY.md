@@ -1,6 +1,6 @@
 # SUMMARY
 
-* [Introduction](README.md)
+* [Introduction to linguistics-engine](README.md)
 
 ### Quick Start 
 * [Prerequisite](qs/prerequisite.md)
