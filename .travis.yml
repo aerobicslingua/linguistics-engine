@@ -9,19 +9,12 @@ services:
 - docker
 branches:
   only:
-  - master
-  - develop
   - "/^\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$/"
 install: true
 script:
 - make mk-image
 - make mk-deployment VERSION=$TRAVIS_TAG
 deploy:
-- provider: script
-  script: make pushtohub USER=$DOCKER_USER PASS=$DOCKER_PASS TAG=$TRAVIS_BRANCH
-  on:
-    all_branches: true
-    condition: "$TRAVIS_BRANCH =~ ^master|develop$"
 - provider: script
   script: make pushtohub USER=$DOCKER_USER PASS=$DOCKER_PASS TAG=$TRAVIS_TAG
   on:
