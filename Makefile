@@ -42,7 +42,7 @@ DEPLOYMENT_x86=$(DEPLOYMENT)/imageAPI-x86
 mk-deployment-x86: $(DEPLOYMENT_x86)
 	mkdir $(REPO)-imageAPI-x86
 	cp $(DEPLOYMENT_x86)/docker-compose.yml $(DEPLOYMENT_x86)/temp.env $(DEPLOYMENT_x86)/Makefile $(REPO)-imageAPI-x86/
-	sed -i s+VERSION=latest.*+VERSION=$(VERSION)+g $(REPO)-imageAPI-x86/temp.env
+	sed -i s+VERSION=test.*+VERSION=$(VERSION)+g $(REPO)-imageAPI-x86/temp.env
 	zip -r $(REPO)-x86-$(VERSION).zip $(REPO)-imageAPI-x86
 	rm -rf $(REPO)-imageAPI-x86
 
