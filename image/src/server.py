@@ -4,7 +4,7 @@ import logic
 app = Flask(__name__)
 
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
-url = 'http://127.0.0.1:3000/query/%s'
+url = 'http://0.0.0.0:3000/query/%s'
 
 @app.route('/')
 def hello_world():
