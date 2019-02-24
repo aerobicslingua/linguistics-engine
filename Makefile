@@ -54,6 +54,6 @@ clean-deployment: $(REPO)-*-$(VERSION).zip
 
 .PHONY: pushtohub
 pushtohub:
-	docker tag $(OWNER)/$(REPO)-$(ARCH) $(OWNER)/$(REPO)-$(ARCH):$(TAG)
+	docker tag $(OWNER)/$(REPO)-$(ARCH):$(VERSION) $(OWNER)/$(REPO)-$(ARCH):$(TAG)
 	docker login -u $(USER) -p $(PASS)
 	docker push $(OWNER)/$(REPO)-$(ARCH):$(TAG)
