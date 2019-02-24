@@ -4,11 +4,11 @@ import logic
 app = Flask(__name__)
 
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
-url = 'http://0.0.0.0:3000/query/%s'
+url = 'http://%s:3000/query/%s'
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def linguistics():
+    return 'Hello, Linguistics engine works!'
 
 @app.route('/upload', methods=['POST'])
 def upload_file():

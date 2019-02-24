@@ -5,5 +5,5 @@ services:
     ports:
         - 7000:5000
     environment:
-        FLASK_APP: 'server.py'
+        DICT_IP: ${IP}
 
