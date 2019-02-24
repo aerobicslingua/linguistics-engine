@@ -10,8 +10,8 @@ make mk-image
 ### Test image
 ```
 cd linguistics-engine/deployment
-make config NAME=linguistics
-make start NAME=linguistics
+make config NAME=le
+make start NAME=le
 ```
 The container should be started and the http service is listening at port `7000`.
 * `docker ps -a` to make sure the service is up.
