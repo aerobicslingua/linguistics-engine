@@ -12,5 +12,5 @@ cd linguistics-engine-imageAPI-x86
 make config NAME=le
 make start NAME=le
 ```
-You can visit the `127.0.0.1:8000/` to test.
+You can visit the `127.0.0.1:7000/` to test.
 
