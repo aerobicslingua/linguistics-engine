@@ -3,7 +3,7 @@ import json
 import os
 
 def query_one(url, word):
-    query_url = url % (os.environ.get('DICT_IP'), word)
+    query_url = url % (os.environ.get('DE_URL'), word)
     content = json.loads(urllib.request.urlopen(query_url).read())
     print(content)
     if len(content)==1:
@@ -19,7 +19,7 @@ def query_more(url, words):
     return rs
 
 if __name__ == '__main__':
-    os.environ['DICT_IP'] = '127.0.0.1'
-    url = 'http://%s:3000/query/%s'
+    os.environ['DE_URL'] = '127.0.0.1:3000'
+    url = 'http://%s/query/%s'
     words = ['hello', 'wonder', 'great']
     print(query_more(url, words))

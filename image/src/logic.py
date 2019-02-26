@@ -14,6 +14,6 @@ def parse_translate_vtt(url, filename):
 
 if __name__ == '__main__':
     vtt = sys.argv[1]
-    os.environ['DICT_IP'] = '127.0.0.1'
-    url = 'http://%s:3000/query/%s'
+    os.environ['DE_URL'] = '127.0.0.1:3000'
+    url = 'http://%s/query/%s'
     print(parse_translate_vtt(url, vtt))

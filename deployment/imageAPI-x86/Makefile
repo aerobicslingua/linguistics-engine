@@ -6,7 +6,7 @@ ENV=$(CURDIR)/.env
 config:
 	cp $(ENV_TEMP) $(ENV)
 	# add extra env variables
-	sed -i s+IP='127.0.0.1'+IP=$(IP)+g $(ENV)
+	sed -i s+DE_URL='127.0.0.1'+DE_URL=$(DE_URL)+g $(ENV)
 	cat $(ENV)
 	mkdir -p $(COMP_DIR)
 	docker-compose -p $(NAME) -f $(CURDIR)/docker-compose.yml config | tee $(COMP_DIR)/$(NAME).yml

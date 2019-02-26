@@ -4,7 +4,7 @@ import logic
 app = Flask(__name__)
 
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
-url = 'http://%s:3000/query/%s'
+url = 'http://%s/query/%s'
 
 @app.route('/')
 def linguistics():

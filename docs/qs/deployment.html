@@ -265,10 +265,10 @@
 unzip linguistics-engine-x86-0.1.1.zip
 </code></pre><h3 id="config-and-start">Config and start</h3>
 <pre><code>cd linguistics-engine-imageAPI-x86
-make config NAME=le IP=&apos;192.168.21.62&apos;
+make config NAME=le DE_URL=[dictionary_api_url]
 make start NAME=le
 </code></pre><ul>
-<li><code>IP</code> represents ip address where dictionary api is installed</li>
+<li><code>DE_URL</code> is formed as <code>ip:port</code>, representing ip address and port where dictionary api is installed, e.g, <code>192.168.21.62:3000</code>.</li>
 <li>You can visit the <code>127.0.0.1:7000/</code> to test the linguistics api.</li>
 </ul>
 
@@ -314,7 +314,7 @@ make start NAME=le
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Deployment","level":"2.2","depth":1,"next":{"title":"How to set dev environment","level":"3.1","depth":1,"path":"dev/setdevenv.md","ref":"dev/setdevenv.md","articles":[]},"previous":{"title":"Prerequisite","level":"2.1","depth":1,"path":"qs/prerequisite.md","ref":"qs/prerequisite.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"qs/deployment.md","mtime":"2019-02-24T06:15:13.283Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-24T06:15:38.342Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Deployment","level":"2.2","depth":1,"next":{"title":"How to set dev environment","level":"3.1","depth":1,"path":"dev/setdevenv.md","ref":"dev/setdevenv.md","articles":[]},"previous":{"title":"Prerequisite","level":"2.1","depth":1,"path":"qs/prerequisite.md","ref":"qs/prerequisite.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"qs/deployment.md","mtime":"2019-02-26T05:20:37.511Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-26T05:21:21.133Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -9,9 +9,9 @@ unzip linguistics-engine-x86-0.1.1.zip
 ### Config and start
 ```
 cd linguistics-engine-imageAPI-x86
-make config NAME=le IP='192.168.21.62'
+make config NAME=le DE_URL=[dictionary_api_url]
 make start NAME=le
 ```
-* `IP` represents ip address where dictionary api is installed
+* `DE_URL` is formed as `ip:port`, representing ip address and port where dictionary api is installed, e.g, `192.168.21.62:3000`.
 * You can visit the `127.0.0.1:7000/` to test the linguistics api.
 
