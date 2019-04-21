@@ -6,6 +6,7 @@ import os
 def parse_translate_vtt(url, filename):
     vtt_pos = PoS.parse_vtt(filename)
     for line in vtt_pos:
+        print(line)
         for w in line['POS']:
             if w['pos'] not in ['PUNCT', 'SPACE', 'NUM', 'PART']:
                 w['dict_content'] = querydict.query_one(url, w['text'])
