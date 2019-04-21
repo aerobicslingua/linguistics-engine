@@ -2,8 +2,8 @@
 
 ### Download zip package from [releases](https://github.com/aerobicslingua/linguistics-engine/releases)
 ```
-wget https://github.com/aerobicslingua/linguistics-engine/releases/download/0.1.2/linguistics-engine-x86-0.1.2.zip
-unzip linguistics-engine-x86-0.1.2.zip
+wget https://github.com/aerobicslingua/linguistics-engine/releases/download/0.1.3/linguistics-engine-x86-0.1.3.zip
+unzip linguistics-engine-x86-0.1.3.zip
 ```
 
 ### Config and start
